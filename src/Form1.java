@@ -20,8 +20,8 @@ public class Form1 {
     private JButton btnMulti;
     private JButton btnResta;
     private JButton btnSuma;
-    private JButton raízCuaButton;
-    private JButton xNButton;
+    private JButton raizCuaButton;
+    private JButton btnPotencia;
     private JButton senButton;
     private JButton cosButton;
     private JButton tanButton;
@@ -180,7 +180,54 @@ public class Form1 {
                             panelCalculadora.setText("Ingrese un divisor distinto de 0");
                             break;
                         }
+                    case "^":
+                        resultado = Math.pow(numero1,numero2);
+                        panelCalculadora.setText(Double.toString(Math.round(resultado * 100.0)/100.0));
+                        break;
                 }
+            }
+        });
+        raizCuaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                numero1 = Double.parseDouble(panelCalculadora.getText());
+                double raiz = Math.round(Math.sqrt(numero1) * 100.0)/100.0;
+                panelCalculadora.setText(Double.toString(raiz));
+            }
+        });
+        btnPotencia.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                numero1 = Double.parseDouble(panelCalculadora.getText());
+                panelCalculadora.setText("");
+                operacion = "^";
+            }
+        });
+        senButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                numero1 = Double.parseDouble(panelCalculadora.getText());
+                numero1 = numero1 * (Math.PI/180);
+                double seno = Math.round(Math.sin(numero1) * 100.0)/100.0;
+                panelCalculadora.setText(Double.toString(seno));
+            }
+        });
+        cosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                numero1 = Double.parseDouble(panelCalculadora.getText());
+                numero1 = numero1 * (Math.PI/180);
+                double cos = Math.round(Math.cos(numero1) * 100.0)/100.0;
+                panelCalculadora.setText(Double.toString(cos));
+            }
+        });
+        tanButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                numero1 = Double.parseDouble(panelCalculadora.getText());
+                numero1 = numero1 * (Math.PI/180);
+                double tan = Math.round(Math.tan(numero1) * 100.0)/100.0;
+                panelCalculadora.setText(Double.toString(tan));
             }
         });
     }

@@ -16,6 +16,7 @@
         </constraints>
         <properties>
           <background color="-1"/>
+          <font name="JetBrains Mono SemiBold" size="20"/>
           <horizontalAlignment value="11"/>
           <horizontalTextPosition value="4"/>
           <text value=""/>
@@ -149,7 +150,7 @@
           <text value="+"/>
         </properties>
       </component>
-      <component id="7672d" class="javax.swing.JButton" binding="raízCuaButton" default-binding="true">
+      <component id="7672d" class="javax.swing.JButton" binding="raizCuaButton">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -157,7 +158,7 @@
           <text value="√"/>
         </properties>
       </component>
-      <component id="79cfd" class="javax.swing.JButton" binding="xNButton" default-binding="true">
+      <component id="79cfd" class="javax.swing.JButton" binding="btnPotencia">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -194,7 +195,8 @@
           <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Borrar"/>
+          <actionCommand value=""/>
+          <text value="CE"/>
         </properties>
       </component>
       <component id="9a100" class="javax.swing.JButton" binding="btnBorDigito">
@@ -203,7 +205,7 @@
         </constraints>
         <properties>
           <horizontalTextPosition value="0"/>
-          <text value="&lt;-"/>
+          <text value="⌫"/>
         </properties>
       </component>
     </children>
